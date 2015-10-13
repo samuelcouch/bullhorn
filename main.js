@@ -1,17 +1,32 @@
-"use strict";
+'use strict';
 
 var app = require('app');
 var BrowserWindow = require('browser-window');
 
 var mainWindow = null;
 
-app.on('ready', function() {
-  mainWindow = new BrowserWindow({
-    frame: false,
-    height: 700,
-    width: 368,
-    resizable: false
-  });
+var globalShortcut = require('global-shortcut');
 
-  mainWindow.loadUrl('file://' + __dirname + '/app/index.html');
+app.on('ready', function() {
+    mainWindow = new BrowserWindow({
+        frame: false,
+        height: 700,
+        resizable: false,
+        width: 368
+    });
+
+    mainWindow.loadUrl('file://' + __dirname + '/app/index.html');
+
+    globalShortcut.register('ctrl+shift+1', function () {
+        mainWindow.webContents.send('global-shortcut', 0);
+    });
+    globalShortcut.register('ctrl+shift+2', function () {
+        mainWindow.webContents.send('global-shortcut', 1);
+    });
+});
+
+var ipc = require('ipc');
+
+ipc.on('close-main-window', function () {
+    app.quit();
 });

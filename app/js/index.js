@@ -18,3 +18,15 @@ function prepareButton(buttonEl, soundName) {
         audio.play();
     });
 }
+
+var ipc = require('ipc');
+
+var closeEl = document.querySelector('.close');
+closeEl.addEventListener('click', function () {
+    ipc.send('close-main-window');
+});
+
+ipc.on('global-shortcut', function (arg) {
+    var event = new MouseEvent('click');
+    soundButtons[arg].dispatchEvent(event);
+});
