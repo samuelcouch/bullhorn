@@ -22,5 +22,8 @@
   "homepage": "https://github.com/samuelcouch/bullhorn#readme",
   "devDependencies": {
     "electron-prebuilt": "^0.33.7"
+  },
+  "dependencies": {
+    "underscore": "^1.8.3"
   }
 }

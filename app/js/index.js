@@ -1,5 +1,7 @@
 'use strict';
 
+var _ = require('underscore');
+
 var soundButtons = document.querySelectorAll('.button-sound');
 
 for (var i = 0; i < soundButtons.length; i++) {
@@ -12,7 +14,9 @@ for (var i = 0; i < soundButtons.length; i++) {
 function prepareButton(buttonEl, soundName) {
     buttonEl.querySelector('span').style.backgroundImage = 'url("img/icons/' + soundName + '.png")';
 
-    var audio = new Audio(__dirname + '/wav/' + soundName + '.wav');
+    var sounds = ['applause', 'ba-dum-tsss', 'crowd-laughing', 'money', 'sad-trombone']
+
+    var audio = new Audio(__dirname + '/wav/' + _.sample(sounds) + '.wav');
     buttonEl.addEventListener('click', function () {
         audio.currentTime = 0;
         audio.play();
