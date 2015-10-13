@@ -1,3 +1,10 @@
+@font-face {
+    font-family: Pacifico;
+    src: url(../fonts/Pacifico/Pacifico.ttf) format('truetype');
+    font-weight: 400;
+    font-style: normal
+}
+
 html,
 body {
     background: #0C7CA2;
@@ -27,9 +34,10 @@ body {
 #main h1 {
     color: #fff;
     padding-right: 6px;
-    padding-top: 5px;
+    padding-top: 2px;
     text-align: right;
     text-indent: -10000px;
+    font-family: Pacifico;
 }
 
 #main h1 img {
