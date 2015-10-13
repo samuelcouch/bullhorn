@@ -1,5 +1,5 @@
 {
-  "name": "fire",
+  "name": "bullhorn",
   "version": "0.0.1",
   "description": "A simple sound board built with electron",
   "main": "main.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com/samuelcouch/drummer.git"
+    "url": "git@github.com/samuelcouch/bullhorn.git"
   },
   "keywords": [
     "electron",
@@ -17,9 +17,9 @@
   "author": "Sam Couch <sam@couch.rocks>",
   "license": "BSD-3-Clause",
   "bugs": {
-    "url": "https://github.com/samuelcouch/fire/issues"
+    "url": "https://github.com/samuelcouch/bullhorn/issues"
   },
-  "homepage": "https://github.com/samuelcouch/fire#readme",
+  "homepage": "https://github.com/samuelcouch/bullhorn#readme",
   "devDependencies": {
     "electron-prebuilt": "^0.33.7"
   }
